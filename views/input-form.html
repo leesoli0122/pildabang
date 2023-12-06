@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="../resources/css/lib/renewal.css"> -->
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
     <link rel="stylesheet" href="../resources/css/lib/default.css">
-    <link rel="stylesheet" href="../resources/css/lib/new_renewal.css">
+    <!-- <link rel="stylesheet" href="../resources/css/lib/new_renewal.css"> -->
 
     <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="../resources/js/lib/default.js"></script>
-    <script type="text/javascript" src="../resources/js/lib/ui.js"></script>
+    <!-- <script type="text/javascript" src="../resources/js/lib/ui.js"></script> -->
 </head>
 
 <body>
@@ -80,15 +80,6 @@
                     </div> -->
 
                     <div class="form-group">
-                        <label for="user_phone">휴대폰 번호</label>
-                        <div class="form-control select"  onclick="openPopupUp('lySel')"  tabindex="0">
-                            <a href="#none" tabindex="-1"><span>통신사 선택</span></a>
-                        </div>
-                        <input id="user_phone" type="tel" name="phone" class="form-control" maxlength="11"
-                            placeholder="- 없이 숫자만 입력" inputmode="tel"><!--휴대폰 번호 : type="tel"/ inputmode="tel"-->
-                    </div>
-
-                    <div class="form-group">
                         <label for="user-email">이메일</label>
                         <input type="email" name="email" class="form-control" id="user-email"
                             aria-describedby="emailHelp" placeholder="이메일을 입력해주세요"
@@ -140,8 +131,37 @@
                                 <button class="btn search img" type="button">검색</button>
                             </div> -->
                     </div>
-                   
+                    
+                    <div class="form-group">
+                        <label for="user_phone" style="margin-bottom: 10px;">휴대폰 번호</label><!-- 가져가지 않음 -->
+                        <div class="form-control select"  onclick="openPopupUp('lySel')"  tabindex="0">
+                            <a href="#none" tabindex="-1"><span>통신사 선택</span></a>
+                        </div>
+                        <input id="user_phone" type="tel" name="phone" class="form-control select" maxlength="11"
+                            placeholder="- 없이 숫자만 입력" inputmode="tel"><!--휴대폰 번호 : type="tel"/ inputmode="tel"-->
+                    </div>
 
+                    <div class="form-group">
+                        <label for="user_phone" style="margin-bottom: 10px;">Author</label><!-- 가져가지 않음 -->
+                        <div class="form-control select"  onclick="openPopupUp('lySel2')"  tabindex="0">
+                            <a href="#none" tabindex="-1"><span>Author</span></a>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user_phone" style="margin-bottom: 10px;">Author</label><!-- 가져가지 않음 -->
+                        <div class="form-control select arrow"  onclick="openPopupUp('lySel2')"  tabindex="0">
+                            <a href="#none" tabindex="-1"><span>Author</span></a>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user_phone" style="margin-bottom: 10px;">Author</label><!-- 가져가지 않음 -->
+                        <div class="form-control select arrow"  onclick="openPopupUp('lySel2')"  tabindex="0">
+                            <a href="#none" tabindex="-1"><span>Author</span></a>
+                        </div>
+                    </div>
+                    
                     <!-- <div class="form-group address line">
                         <div class="input" tabindex="0">
                             <a href="#none" tabindex="-1">
@@ -258,3 +278,21 @@
     </div>
 </div>
 <!--휴대폰팝업//-->
+
+<!--//Author팝업-->
+<div id="lySel2" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">Author</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+        <div class="ly-scroll-con ly-select">
+            <ul class="ly-select-list">
+                <li><button>Confirm</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                <li><button>Available</button></li>
+                <li><button>Unavailable</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--Author팝업//-->
