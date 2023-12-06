@@ -1,0 +1,98 @@
+/* grid */
+html { box-sizing:border-box; -ms-overflow-style:scrollbar; }
+
+/* *,
+*::before,
+*::after { box-sizing: inherit; } */
+
+/* .wrap * { box-sizing:border-box; } */
+.wrap { position:relative; display:block; margin:0; /*padding:50px 0 0;*/ width:100%; height:100%; min-height:420px;  }
+
+:root {
+    --main: #455AE6;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-35:2.187rem;
+    --font-24:1.5rem;
+    --font-20:1.25rem;
+    --font-18:1.125rem;
+    --font-16:1rem;
+    --font-14:0.875rem;
+    --font-12:0.75rem;
+}
+
+
+.header { position:fixed; top:0; left:0; z-index:10; width:100%; min-height:40px; line-height:40px; }
+header a.btn_prev,
+header a.btn_menu { position:absolute;  top:0; bottom:0; z-index:2; padding:0; width:40px; height:40px; font-size:0; }
+header a.btn_prev { left:0; }
+header a.btn_menu { right:0; }
+header a.btn_prev::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/btn_back.png) no-repeat 50%/24px auto; }
+header a.btn_menu::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/btn_menu.png) no-repeat 50%/24px auto; }
+header h1 { overflow:hidden; margin:0; padding:0; font-size:1rem; font-weight:500; line-height:40px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
+form { height:100%; }
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
+[tabindex="-1"]:focus { outline: 0 !important; }
+ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; }
+input, textarea {  vertical-align: middle; padding: 0; margin: 0; border:none; }
+body, p, h1, h2, h3, h4, h5, h6, table, caption, form, fieldset, legend, span, div, th, td, address { position:relative; margin:0; padding:0;  }
+label { display: inline-block; font-size:var(--font-16); line-height:1rem; color:#999999; }
+.dp-none { display:none; }
+legend, caption{width:0; height:0; text-indent:-10000px; font-size:0; line-height:0; position:absolute; left:-99999px; }
+table{/*border-collapse:collapse;*/ border-spacing:0; width:100%}
+a { /* color: #007bff; */ color:#495057; text-decoration:none; background-color:transparent; }
+img,
+svg { vertical-align:middle; border-style:none; }
+table { border-collapse:collapse; }
+button { border-radius:0; }
+.line { border: 1px solid #ced4da; border-radius:5px; background-color: #fff; padding:10px; }
+
+
+/** input-line **/
+.form-wrap .form-group:first-child { margin-top:40px; }
+.form-group .form-tit { display:inline-block; margin-bottom:10px; color:#757575; font-size:0.89rem; font-weight:400;}
+.form-group { margin-bottom:20px; }
+/* .form-group label { margin-bottom:10px; } */
+/* .form-group label { display:none; } */
+input::placeholder { font-size: var(--font-18); color: #CCCCCC; }
+.form-control { display:block; width:100%; min-height:50px; /*height:calc(2.25rem + 2px);*/ padding:10px 0; font-size:0.875rem; line-height:1rem; font-weight:400; color:#B2B2B2; background-color: #fff;  background-clip: padding-box; border-bottom: 2px solid #DDDDDD; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+.form-control:focus:not(.form-control[readonly]:focus),
+.input:focus { color:#495057; outline:0; background-color:#fff; border-color:var(--main); /*box-shadow:0 0 0 0.2rem rgba(0, 123, 255, 0.25);*/ }
+/* .form-control:disabled,
+.form-control[readonly] { background-color:#F2F2F2; } */
+.form-control:disabled { color:#B2B2B2; }
+.form-control[readonly] { color:#909090; }
+/* .input-group.address > input:focus { border: } */
+/* .input-group.address:focus { border:1px solid red; } */
+.form-control.is-invalid~.invalid-feedback { display:block; }
+.invalid-feedback { display:block; width:100%; margin-top:5px; font-size:0.78rem; color:#dc3545; }
+.form-control.is-invalid,
+.form-control:invalid { border-color:#dc3545; }
+
+/** input-border **/
