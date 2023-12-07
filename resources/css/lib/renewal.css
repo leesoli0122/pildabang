@@ -182,7 +182,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn-block { display:block; width:100%; }
 
 /* btn-primary */
-.btn.btn-primary { width:100%; color:#fff; background-color:#B095DC; border-color:#B095DC; }
+.btn.btn-primary { width:100%; color:#fff; background-color:var(--main); border-color:var(--main); }
 /*.btn.btn-primary:hover { color:#fff; background-color:#0069d9; border-color:#0062cc; }*//* 색감 지정 필요 */
 .btn.btn-primary:focus, .btn.btn-primary.focus { /*box-shadow:0 0 0 0.2rem rgba(38, 143, 255, 0.5);*/ }/* 색감 지정 필요 */
 .btn.btn-primary.disabled, .btn.btn-primary:disabled { color:#fff; background-color:#1F4565; border-color:#1F4565; }
