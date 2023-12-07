@@ -74,14 +74,22 @@ html { box-sizing:border-box; -ms-overflow-style:scrollbar; }
 *::before,
 *::after { box-sizing: border-box; outline:none; }
 
+/* 2023.12.07 헤더 수정 */
 .header { position:fixed; top:0; left:0; z-index:10; width:100%; min-height:40px; line-height:40px; }
 header a.btn_prev,
-header a.btn_menu { position:absolute;  top:0; bottom:0; z-index:2; padding:0; width:40px; height:40px; font-size:0; }
+header a.btn_menu,
+header .reset { position:absolute;  top:0; bottom:0; z-index:2; padding:0; width:40px; height:40px; }
+header a.btn_prev,
+header a.btn_menu,
+header .reset { font-size:0; }
+header .reset { font-size:0.875rem; border:none; background-color: transparent; }
 header a.btn_prev { left:0; }
-header a.btn_menu { right:0; }
+header a.btn_menu,
+header .reset { right:0; }
 header a.btn_prev::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/btn_back.png) no-repeat 50%/24px auto; }
 header a.btn_menu::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/btn_menu.png) no-repeat 50%/24px auto; }
 header h1 { overflow:hidden; margin:0; padding:0; font-size:1rem; font-weight:500; line-height:40px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
+header h1 a img { width:32px; height:26px; }
 form { height:100%; }
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
 [tabindex="-1"]:focus { outline: 0 !important; }
@@ -198,6 +206,7 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 /* btn-research */
 .btn.btn-research { z-index:1; position:absolute; padding:10px; top:10px; right:10px; cursor:pointer; font-weight:500; color:#FFFFFF; border:1px solid #7A78FF; background-color:#7A78FF; }
 
+/* 2023.12.06 수정 */
 /** input-line **/
 .form-wrap .form-group:first-child { margin-top:40px; }
 .form-group .form-tit { display:inline-block; margin-bottom:10px; color:#757575; font-size:0.89rem; font-weight:400;}
@@ -218,6 +227,18 @@ input::placeholder { font-size: var(--font-18); color: #CCCCCC; }
 .invalid-feedback { display:block; width:100%; margin-top:5px; font-size:0.78rem; color:#dc3545; }
 .form-control.is-invalid,
 .form-control:invalid { border-color:#dc3545; }
+
+.form-cont .li-input > li {
+    display: block;
+    position: relative;
+    /* height: 1px; */
+    min-height: 60px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid var(--border-color01);
+    border-radius: 10px;
+}
 
 /** input-border **/
 .form-control.select { display:block; width:100%; min-height:50px; /*height:calc(2.25rem + 2px);*/ padding:10px 0; font-size:0.875rem; line-height:1rem; font-weight:400; color:#B2B2B2; background-color: #fff;  background-clip: padding-box; border:1px solid #D2D2D2; border-radius:6px; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
