@@ -168,6 +168,7 @@ input[type="month"] { -webkit-appearance: listbox; } */
 .fixed-btn-wrap { position:fixed; bottom:0; left:0; width:100%; z-index:20; text-align:center; background:linear-gradient(0deg, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%); }
 
 /* 2023.12.06 수정 */
+.btn-wrap .btn.btn-txt { margin-top:10px; }
 .btn-wrap:not(.login-section .btn-wrap) { padding:15px; }
 .login-section .btn-wrap { padding-top:40px; }
 
@@ -182,15 +183,15 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .btn-block { display:block; width:100%; }
 
 /* btn-primary */
-.btn.btn-primary { width:100%; color:#fff; background-color:var(--main); border-color:var(--main); }
+.btn.btn-primary { width:100%; color:#FFFFFF; background-color:var(--main); border-color:var(--main); }
 /*.btn.btn-primary:hover { color:#fff; background-color:#0069d9; border-color:#0062cc; }*//* 색감 지정 필요 */
 .btn.btn-primary:focus, .btn.btn-primary.focus { /*box-shadow:0 0 0 0.2rem rgba(38, 143, 255, 0.5);*/ }/* 색감 지정 필요 */
-.btn.btn-primary.disabled, .btn.btn-primary:disabled { color:#fff; background-color:#1F4565; border-color:#1F4565; }
+.btn.btn-primary.disabled, .btn.btn-primary:disabled { color:#FFFFFF; background-color:#1F4565; border-color:#1F4565; }
 .btn.btn-primary:not(:disabled):not(.disabled):active, .btn.btn-primary:not(:disabled):not(.disabled).active { color: #fff; background-color: #0062cc; border-color: #005cbf }/*클릭*//* 색감 지정 필요 */
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus { /*box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);*/ }/* 색감 지정 필요 */
 
 /* btn-txt */
-.btn.btn-txt { width:100%; color:#666666; }
+.btn.btn-txt { width:100%; color:#666666; background:#F4F5FB; }
 
 
 /* btn-clear */
@@ -286,7 +287,7 @@ input::placeholder { font-size: var(--font-18); color: #CCCCCC; }
 /* amount */
 .amount { position:relative; }
 .amount .amount-num { display:block; padding-right:40px; }
-.amount .amount-num + .amount-txt { position:absolute; right:15px; top:50%; transform:translate(0, -50%); font-size:1rem; font-weight:600; }
+.amount .amount-num + .amount-txt { position:absolute; right:15px; top:50%; transform:translate(0, -50%); font-size:1.25rem; font-weight:500; }
 
 /* address */
 /* .input,.input.select { display:block; width:100%; height:100%; padding: 4px 7px; font-size:1rem; font-weight:400; line-height:1; color:#495057; background-color:#fff; background-clip:padding-box; border:1px solid #ced4da; border-radius:0.25rem; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; } */
@@ -574,12 +575,15 @@ iframe { border:none; }
 
 /* 버튼 */
 /* 공통 - 컨텐츠 in 버튼 */
-.btn-cont-wrap { display:flex; align-items:start; padding:0; width:100%; text-align:center; }
-.btn-cont-wrap .btn { z-index:2; display:block; position:relative; padding:14px 5px; width:100%; border-radius:10px;  color:var(--text-color04); font-size:1rem; font-weight:700; text-align:center; background: var(--main-color01); background:linear-gradient(320deg,rgb(11, 75, 131) 0%, rgba(3, 95, 175, 1) 100%); }
+.btn-cont-wrap { display:flex; align-items:start; padding:30px 20px; width:100%; text-align:center; }/* 공통 - padding 값 변경: 버튼 두개가 한 줄로 올 때, bottom에 픽스될 때를 위해 */
+.btn-cont-wrap .btn { z-index:2; display:block; position:relative; padding:14px 5px; width:100%; border-radius:10px;  color:var(--text-color04); font-size:1rem; font-weight:700; text-align:center; /*background: var(--main-color01); background:linear-gradient(320deg,rgb(11, 75, 131) 0%, rgba(3, 95, 175, 1) 100%);*/ }
 .btn-cont-wrap .btn + .btn { margin-left:10px; }
 
 .btn-cont-wrap .btn.btn-info { background:#FFFFFF; color:#101010; }
-.btn-cont-wrap .btn.btn-primary { background:#B095DC; color:#FFFFFF; }
+.btn-cont-wrap .btn.btn-primary { background:var(--main); color:#FFFFFF; }
+
+/* button-disabled */
+.btn-cont-wrap .btn.disabled { background:#DDDEDF; color:#848B95;}
 
 /* 로그아웃 */
 .btn.logout { padding:6px 10px; border-radius: 32px;font-size:0.75rem; line-height:0.875rem; font-weight:400; color:#848B95; background:#EBEDEF; }
