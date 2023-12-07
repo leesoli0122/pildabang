@@ -76,20 +76,29 @@ html { box-sizing:border-box; -ms-overflow-style:scrollbar; }
 
 /* 2023.12.07 헤더 수정 */
 .header { position:fixed; top:0; left:0; z-index:10; width:100%; min-height:40px; line-height:40px; }
-header a.btn_prev,
-header a.btn_menu,
-header .reset { position:absolute;  top:0; bottom:0; z-index:2; padding:0; width:40px; height:40px; }
-header a.btn_prev,
-header a.btn_menu,
-header .reset { font-size:0; }
-header .reset { font-size:0.875rem; border:none; background-color: transparent; }
+header a.header-btn,
+header .reset,
+header .btn-group { position:absolute;  top:0; bottom:0; z-index:2; padding:0; width:40px; height:40px; }
+header .btn-group { display:flex; justify-content: flex-end; width:100%; }
+header a.header-btn,
+header .reset,
+header .btn-group a { font-size:0; }
+header .reset { margin-right:10px; font-size:0.875rem; border:none; background-color:transparent; }
 header a.btn_prev { left:0; }
 header a.btn_menu,
-header .reset { right:0; }
+header a.btn_menu_white,
+header .reset,
+header a.btn_close { right:0; }
 header a.btn_prev::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/btn_back.png) no-repeat 50%/24px auto; }
+header a.btn_prev_white::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/btn_back_white.png) no-repeat 50%/24px auto; }
 header a.btn_menu::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/btn_menu.png) no-repeat 50%/24px auto; }
-header h1 { overflow:hidden; margin:0; padding:0; font-size:1rem; font-weight:500; line-height:40px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
+header a.btn_close::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/btn_close.png) no-repeat 50%/24px auto; }
+header a.share::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/ic_share_white.png) no-repeat 50%/24px auto; }
+header a.heart::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/ic_heart.png) no-repeat 50%/24px auto; }
+header a.btn_menu_white::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/btn_menu_white.png) no-repeat 50%/24px auto; }
+header h1 { overflow:hidden; margin:0; padding:0; font-size:1.125rem; font-weight:400; line-height:40px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
 header h1 a img { width:32px; height:26px; }
+
 form { height:100%; }
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
 [tabindex="-1"]:focus { outline: 0 !important; }

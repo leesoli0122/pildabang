@@ -17,7 +17,9 @@
     /* 스타일은 가져가는 거 아님 */
     .guide { background-color:#C9C9C9 ; }
     .guide > h2 {padding: 25px 10px 10px; font-weight: 500; font-size: 1rem;}
-    .relative { position: relative; background-color: #ffffff; }/*가져갈 때 클래스 빼서 가져가기*/
+    /*가져갈 때 클래스 빼서 가져가기*/
+    .relative { position: relative; height: 40px; background-color: #ffffff; }
+    .black { background-color: #000000; }
 </style>
 
 <body>
@@ -26,31 +28,61 @@
         <div class="guide">
             <h2>· 좌측 - 이전버튼 / 로고 / 우측 - 메뉴버튼</h2>
             <header id="lnb" class="relative">
-                <a href="javascript:void(0);" onclick="" class="btn_prev">이전</a>
+                <a href="javascript:void(0);" onclick="" class="btn_prev header-btn">이전</a>
                 <h1>
                     <a href="">
                         <img src="../resources/images/common/logo.png" alt="로고">
                     </a>
                 </h1>
-                <a href="javascript:void(0)" class="btn_menu">메뉴</a>
+                <a href="javascript:void(0)" class="btn_menu header-btn">메뉴</a>
             </header>
+
             <h2>· 좌측 - 없음  / 로고 / 우측 - 메뉴버튼</h2>
             <header id="lnb" class="relative">
-                <!-- <a href="javascript:void(0);" onclick="" class="btn_prev">이전</a> -->
                 <h1>
                     <a href="">
                         <img src="../resources/images/common/logo.png" alt="로고">
                     </a>
                 </h1>
-                <a href="javascript:void(0)" class="btn_menu">메뉴</a>
+                <a href="javascript:void(0)" class="btn_menu header-btn">메뉴</a>
             </header>
+
             <h2>· 좌측 - 없음 / 우측 - reset</h2>
             <header id="lnb" class="relative">
-                <!-- <a href="javascript:void(0);" onclick="" class="btn_prev">이전</a> -->
                 <h1>
                     Filter
                 </h1>
                 <button class="reset" type="button" onclick="selectAcnoCall('WTCH');">reset</button>
+            </header>
+
+            <h2>· 좌측 - 있음 / 우측 - 공유|하트|메뉴버튼</h2>
+            <header id="lnb" class="relative black">
+                <a href="javascript:void(0);" onclick="" class="btn_prev_white header-btn">이전</a>
+                <div class="btn-group header-btn">
+                    <a href="javascript:void(0)" class="share">공유</a>
+                    <a href="javascript:void(0)" class="heart">하트</a>
+                    <a href="javascript:void(0)" class="btn_menu_white">메뉴</a>
+                </div>
+            </header>
+
+            <h2>· 좌측 - 없음 / 우측 - 메뉴버튼</h2>
+            <header id="lnb" class="relative">
+                <a href="javascript:void(0)" class="btn_menu header-btn">메뉴</a>
+            </header>
+
+            <h2>· 좌측 - 없음 / 우측 - 닫기버튼</h2>
+            <header id="lnb" class="relative">
+                <a href="javascript:void(0)" class="btn_close header-btn">닫기</a>
+            </header>
+
+            <h2>· 좌측 - 있음 / 로고 / 우측 - 메뉴버튼</h2>
+            <header id="lnb" class="relative black">
+                <h1>
+                    <a href="">
+                        <img src="../resources/images/common/logo_white.png" alt="로고">
+                    </a>
+                </h1>
+                <a href="javascript:void(0)" class="btn_menu_white header-btn">메뉴</a>
             </header>
         </div>
     </div>
