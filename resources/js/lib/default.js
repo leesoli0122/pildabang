@@ -1,4 +1,5 @@
 var winH2 = $(window).height() || window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+// 퀵메뉴 위로 올라가기
 $(document).on('click', '.btn-top', function (e) {
   e.preventDefault();
   $('body, html').animate({
@@ -65,6 +66,8 @@ function tooltip() {
     close($(this).data('activeTarget'));
   });
 }
+
+
 //레이어팝업 높이 판단하여 block와 position 컨트롤
 function layerFunc(_target) {
 
@@ -111,13 +114,13 @@ function addBlock(_full) {
    // $('body').append('<div class="block"></div>'); //180529
   }
   /* if(_full != 'removeEvent'){
-       $('.block').on('click', function() {
-           if ($('.block').length > 0) {
-               $('.block').fadeOut(300).empty().remove();
-               $('.layer-up').addClass('close').removeClass('show');
-           }
-       });
-   }*/
+      $('.block').on('click', function() {
+          if ($('.block').length > 0) {
+            $('.block').fadeOut(300).empty().remove();
+            $('.layer-up').addClass('close').removeClass('show');
+          }
+      });
+  }*/
   $('.close').on('click', function () {
     $('.block').trigger('click');
   });
@@ -148,10 +151,10 @@ function openPopup(id) {
   if (_target.hasClass('layer-up')) {
 
   } else if (_target.hasClass('type-alert')){
-	 _target.fadeIn(600);
+	  _target.fadeIn(600);
     _target.focus();
-	_target.addClass("on");
-  
+	  _target.addClass("on");
+
   }else{
     _target.fadeIn(600);
 	_target.addClass("on");

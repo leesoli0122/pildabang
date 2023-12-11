@@ -97,7 +97,7 @@ header a.share::before { content:""; display:block; width:40px; height:40px; bac
 header a.heart::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/ic_heart.png) no-repeat 50%/24px auto; }
 header a.btn_menu_white::before { content:""; display:block; width:40px; height:40px; background:url(../../images/common/btn_menu_white.png) no-repeat 50%/24px auto; }
 header h1 { overflow:hidden; margin:0; padding:0; font-size:1.125rem; font-weight:400; line-height:40px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
-header h1 a img { width:32px; height:26px; }
+header h1 img { width:32px; height:26px; }
 
 form { height:100%; }
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
@@ -634,7 +634,6 @@ iframe { border:none; }
 .histroy-box .history-list .num { font-size:1rem; color:#2E66C7; }
 .histroy-box .history-list .text { font-size:0.875rem; color:#757575; }
 
-/* 2023.12.05 */
 /* 비로그인 */
 .service-wrap {  }
 .service-box { display:flex; justify-content: space-between; width: 100%; gap:20px; }
@@ -666,9 +665,15 @@ iframe { border:none; }
 .news-slider-wrap > .swiper-pagination { width:initial !important; height:4px; top:0 !important; right:12px; text-align:right; }
 .news-slider-wrap .swiper-pagination .swiper-pagination-bullet { width:4px; height:4px; background:#74375940; opacity:1; }
 .news-slider-wrap .swiper-pagination .swiper-pagination-bullet-active { width:12px; transition:width .5s; border-radius:5px; background:#743759; }
-/* 2023.12.05 추가*/
 
-/* 2023.12.06 추가 */
+/* tab-swiper */
+.custom_slide_wrap { width:100%; }
+.swiper-bottom { margin-top:20px; overflow:hidden ; width:100%; }
+.swiper-pagination-custom { display:flex; justify-content: flex-start; text-align: center; margin-top:30px; border-bottom:1px solid #E5E5E5; }
+.custom_bullet { width:99px; padding: 0 10px 11px ; cursor:pointer; }
+.custom_bullet.swiper-pagination-custom-bullet-active::before { content:""; position:absolute; left:0; right:0; bottom:-1px; border-bottom:2px solid #5E5E5E; }
+.custom_bullet span { font-size:1rem; font-weight:700; }
+
 /* login-page */
 .login-section { padding:0 20px; }
 .login-bg { padding-top:110px; width:100%; height:343px; background:#715EBC; }

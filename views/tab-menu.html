@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../resources/css/lib/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="../resources/css/lib/new_renewal.css"> -->
+
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
+    <!-- <script type="text/javascript" src="../resources/js/lib/ui.js"></script> -->
+</head>
+<style>
+    /* 스타일은 가져가는 거 아님 */
+    .guide { background-color:#C9C9C9 ; }
+    .guide > h2 {padding: 25px 10px 10px; font-weight: 500; font-size: 1rem;}
+    /*가져갈 때 클래스 빼서 가져가기*/
+    .relative { position: relative; background-color: #ffffff; }
+    .black { background-color: #000000; }
+</style>
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <div class="guide">
+            <h2>· 슬라이딩 </h2>
+            <section>
+                <div class="custom_slide_wrap">
+                    <div class="swiper-pagination-custom"></div>
+                </div>
+                <div class="swiper-bottom">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p>슬라이드 1번입니다</p>
+                            <p>슬라이드 1번입니다</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>슬라이드 2번입니다</p>
+                            <p>슬라이드 2번입니다</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>슬라이드 3번입니다</p>
+                            <p>슬라이드 3번입니다</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h2>· select 슬라이딩 </h2>
+            <section>
+                <div class="tabs">
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+<script>
+    var text = ['For Sale','Local Info','Features'];
+    var bottomSwiper = new Swiper('.swiper-bottom', {
+        slidesPerView: '1',
+        pagination: {
+            el: ".swiper-pagination-custom",
+            clickable: true,
+            bulletClass:"custom_bullet",
+            bulletActiveClass: "swiper-pagination-custom-bullet-active",
+            renderBullet: function (index, className) {
+            return '<div class="'+className+'"><span>'+ (text[index]) +'</span></div>'
+            },
+        },
+        loop: true,
+        touchRatio: 0.2,
+        observer: true,
+        observeParents: true
+    });
+</script>
+</html>
