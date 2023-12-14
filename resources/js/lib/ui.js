@@ -120,8 +120,17 @@ $(document).ready(function() {
         // Additional logic for handling 'ly-acc-select'
     }
     
+    // 즐겨찾기 on/off 스크립트 (0703 추가)
+	$(".btn-set.like").click(function(){
+		if( $(this).hasClass("on") ){
+			$(this).removeClass("on");
+		}else{
+			$(this).addClass("on");
+		}
+	});
 
 });
+
 
 
 

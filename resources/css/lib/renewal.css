@@ -224,6 +224,24 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 .form-group .filter-group.after li { position:relative; display:inline-block; padding:5px 26px 5px 5px; font-size:0.75rem; border-radius:3px; background-color:#F4F7FC; }
 .form-group .filter-group.after li::after { content:''; display:block; position:absolute; width:13px; height:13px; transform:translateY(-50%); border-radius: 10px; right:5px; top:50%; background: url(../../images/common/prev-area.png)no-repeat center/100%; }
 
+/* img-list */
+.list-group .img-list { margin:20px 0 10px; overflow-x:scroll; white-space:nowrap; }
+.list-group .img-list::-webkit-scrollbar{ display:none; }
+.list-group .img-list li { display:inline-block; }
+.list-group .img-list li img { width:100%; height:170px; border-radius:15px; }
+.list-group .list-tit { display:inline-block; margin-bottom:5px; font-size:1.125rem; font-weight:700; }
+.list-group .list-txt { font-size:0.875rem; font-weight:400; color:#666666; }
+.list-group .list-txt li { position:relative; display:inline-block; }
+.list-group .list-txt li:not(.list-group .list-txt .list-sub-tit) { padding-left:25px; }
+.list-group .list-txt .list-sub-tit { padding-right:18px; color:#9A9A9A; }
+.list-group .list-txt .ic-room::before { content:''; display:block; position:absolute; width:20px; height:20px; top:50%; transform:translateY(-50%); right:8px; background: url(../../images/common/ic_room.png)no-repeat center/20px; }
+.list-group .list-txt .ic-bathtub::before { content:''; display:block; position:absolute; width:20px; height:20px; top:50%; transform:translateY(-50%); right:8px; background: url(../../images/common/ic_bathtub.png)no-repeat 50%/20px; }
+
+/* tooltip */
+.list-group .btn-set { position:absolute; right:0; }
+.like { width:20px; height:20px; background:url(../../images/common/Icon_heart.png)no-repeat 50%/15px; color: transparent; text-indent: -9999px; }
+.like.on { background-image: url(../../images/common/Icon_heart_on.png); }
+
 /* 2023.12.13 수정 */
 /** input 공통 **/
 .form-group { margin-bottom:20px; }
@@ -700,3 +718,4 @@ iframe { border:none; }
 
 /* map */
 .map { width:100%; height:608px; }
+
