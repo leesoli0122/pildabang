@@ -32,16 +32,16 @@ $(document).ready(function() {
         this.value = this.value.replace(/,/g, ''); // ,값 공백처리
         this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
     });
-    
-  
+
+
     /**  popup **/
     function openPopupUp(id) {
         const target = $('#' + id);
         const currentTop = $(window).scrollTop();
-    
+
         fixBodyPosition(currentTop);
         setupCloseFunction(id, target, currentTop);
-    
+
         if (target.hasClass('layer-up')) {
             // Handle specific behavior for 'layer-up' popups if needed
         } else {

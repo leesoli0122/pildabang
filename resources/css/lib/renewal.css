@@ -239,8 +239,8 @@ fieldset:disabled a.btn { pointer-events:none; }/*정의된 커서 옵션 비활
 
 /* tooltip */
 .list-group .btn-set { position:absolute; right:0; }
-.like { width:20px; height:20px; background:url(../../images/common/Icon_heart.png)no-repeat 50%/15px; color: transparent; text-indent: -9999px; }
-.like.on { background-image: url(../../images/common/Icon_heart_on.png); }
+.like { width:20px; height:20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.085' height='15.487'%3E%3Cpath fill='%23757575' d='M12.485 0h-.041a4.747 4.747 0 0 0-3.9 2.013A4.747 4.747 0 0 0 4.644 0H4.6A4.513 4.513 0 0 0 0 4.375a9.086 9.086 0 0 0 1.963 5.137 33.687 33.687 0 0 0 6.579 5.974 33.687 33.687 0 0 0 6.583-5.974 9.086 9.086 0 0 0 1.96-5.138A4.513 4.513 0 0 0 12.485 0Zm1.708 8.874a30.732 30.732 0 0 1-5.651 5.25A30.776 30.776 0 0 1 2.891 8.87 8.053 8.053 0 0 1 1.15 4.374a3.182 3.182 0 0 1 1.01-2.312 3.576 3.576 0 0 1 2.448-.972h.037a3.607 3.607 0 0 1 1.688.418 3.513 3.513 0 0 1 1.249 1.1 1.193 1.193 0 0 0 1.93 0 3.548 3.548 0 0 1 1.249-1.1 3.607 3.607 0 0 1 1.688-.418h.037a3.583 3.583 0 0 1 2.447.972 3.173 3.173 0 0 1 1.01 2.315 8.156 8.156 0 0 1-1.749 4.496Z' data-name='Icon ionic-ios-heart-empty'/%3E%3C/svg%3E")no-repeat center; color: transparent; text-indent: -9999px; }
+.like.on {  width:20px; height:20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.085' height='15.487' viewBox='0 0 17.085 15.487'%3E%3Cpath id='Icon_ionic-ios-heart-empty' data-name='Icon ionic-ios-heart-empty' d='M15.86,3.938h-.041a4.747,4.747,0,0,0-3.9,2.013,4.747,4.747,0,0,0-3.9-2.013H7.975a4.513,4.513,0,0,0-4.6,4.375A9.086,9.086,0,0,0,5.338,13.45a33.687,33.687,0,0,0,6.579,5.974A33.687,33.687,0,0,0,18.5,13.45,9.086,9.086,0,0,0,20.46,8.312,4.513,4.513,0,0,0,15.86,3.938Zm1.708,8.874a30.732,30.732,0,0,1-5.651,5.25,30.776,30.776,0,0,1-5.651-5.254A8.053,8.053,0,0,1,4.525,8.312,3.182,3.182,0,0,1,5.535,6a3.576,3.576,0,0,1,2.448-.972H8.02a3.607,3.607,0,0,1,1.688.418,3.513,3.513,0,0,1,1.249,1.1,1.193,1.193,0,0,0,1.93,0,3.548,3.548,0,0,1,1.249-1.1,3.607,3.607,0,0,1,1.688-.418h.037A3.583,3.583,0,0,1,18.308,6a3.173,3.173,0,0,1,1.01,2.315A8.156,8.156,0,0,1,17.569,12.811Z' transform='translate(-3.375 -3.938)' fill='red'/%3E%3C/svg%3E")no-repeat  center; }
 
 /* 2023.12.13 수정 */
 /** input 공통 **/
@@ -718,4 +718,19 @@ iframe { border:none; }
 
 /* map */
 .map { width:100%; height:608px; }
+
+/* bottom-menu */
+.bottom-menu-area { position:fixed; bottom:0; left:0; z-index:9; width:100%; background:var(--main); }
+.bottom-menu-list { font-size:0; }
+.bottom-menu-list li { display:inline-block; width:25%; height:67px; text-align:center; }
+.bottom-menu-list li a { display:block; width:100%; height:100%; padding-top:3px; color:#FFFFFF; font-size:0.66667rem; line-height:1.58334; line-height:1.75; }
+.bottom-menu-list li.on a { color:#FBCF29; }
+.bottom-menu-list a:before { content:''; display:block; width:100%; min-height:36px; background:url('../images/main/ico_bottom-menu_01.png') no-repeat 50%/ 24px auto; }
+.bottom-menu-list li.home.on a:before { background-image:url('../../images/common/ic_bottom_home_on.png'); }
+.bottom-menu-list li.search a:before { background-image:url('../../images/common/ic_bottom_search.png'); }
+.bottom-menu-list li.search.on a:before { background-image:url('../../images/common/ic_bottom_search_on.png'); }
+.bottom-menu-list li.save a:before { background-image:url('../../images/common/ic_bottom_save.png'); }
+.bottom-menu-list li.save.on a:before { background-image:url('../images/main/ico_bottom-ic_bottom_save_on.png'); }
+.bottom-menu-list li.my a:before { background-image:url('../../images/common/ic_bottom_my.png'); }
+.bottom-menu-list li.my.on a:before { background-image:url('../../images/common/ic_bottom_my_on.png'); }
 
