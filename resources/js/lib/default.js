@@ -17,6 +17,15 @@ $(document).ready(function() {
 		}
 	});
 
+  //tab
+  $(".tab-item > li").click(function(){
+    var tabCont = $(this).attr("data-tab");
+    $(this).siblings().removeClass("on");
+    $(this).addClass("on");
+    $(this).closest("ul").siblings().addClass("dp-none");
+    $("#" + tabCont).removeClass("dp-none");
+  });
+
   /** table 의 checkbox **/
   // 클래스 'custom-check'를 사용하여 모든 "checkbox"를 가져옴.
   var checkboxes = document.querySelectorAll('input[type="checkbox"].custom-check');

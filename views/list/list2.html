@@ -31,88 +31,95 @@
         <form>
             <div class="contents-wrap">
                 <section>
-                    <div class="form-group address">
-                        <input type="search" id="search" class="form-control search" placeholder="" aria-label="Search Addresses" aria-describedby="user-search" inputmode="search">
-                        <button class="btn btn-search outline-secondary" type="button">검색</button>
+                    <div class="list-group">
+                        <div class="swiper-wrap">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-image swiper mySwiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <img src="../../resources/images/common/image_1.png" alt="방1">
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="../../resources/images/common/image_2.png" alt="방2">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="list-tit">₱7,000,000</p>
+                        <a href="#none" class="btn-set like" id="oftnAcct" onclick="oftnAcct(this);">찜</a>
+                        <ul class="list-txt">
+                            <li class="list-sub-tit">2256 Philippine Dr Clearwater, FL 33763</li>
+                        </ul>
+                        <div class="histroy-box">
+                            <ul class="history-list col3">
+                                <li>
+                                    <span class="text">Beds</span>
+                                    <p class="num">2</p>
+                                </li>
+                                <li>
+                                    <span class="text">Baths</span>
+                                    <p class="num">2</p>
+                                </li>
+                                <li>
+                                    <span class="text">sqft</span>
+                                    <p class="num">1,100</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 <section>
-                    <section class="list-wrap">
-                        <div class="list-group">
-                            <section>
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-image">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="../../resources/images/common/image_1.png" alt="방1">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="../../resources/images/common/image_2.png" alt="방2">
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="list-tit">₱7,000,000</p>
-                                <a href="#none" class="btn-set like" id="oftnAcct" onclick="oftnAcct(this);">찜</a>
-                                <ul class="list-txt">
-                                    <li class="list-sub-tit">2256 Philippine Dr Clearwater, FL 33763</li>
-                                </ul>
-                                <div class="histroy-box">
-                                    <ul class="history-list col3">
-                                        <li>
-                                            <span class="text">Beds</span>
-                                            <p class="num">2</p>
-                                        </li>
-                                        <li>
-                                            <span class="text">Baths</span>
-                                            <p class="num">2</p>
-                                        </li>
-                                        <li>
-                                            <span class="text">sqft</span>
-                                            <p class="num">1,100</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </section>
-                            <section>
-                            </section>
-                        </div>
-                    </section>
-                    <section class="list-tab">
-                        <div class="custom_slide_wrap">
-                            <div class="swiper-pagination-custom"></div>
-                        </div>
-                        <div class="swiper-bottom">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <section class="form-wrap section">
-                                        <p class="tit">Price range</p>
-                                        <div class="text-group section">
-                                            <p class="txt">This condo is located at 14651 Philipine #5301, Houston, TX. (ZIP code 77040)
-                                            </p>
-                                            <p class="txt">This property has 2 bedrooms, 2bathrooms and approximately 1,200 sqft of floor space.
-                                            </p>
-                                        </div>
-                                    </section>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="tab-map"></div>
-                                    <p class="tit">Description</p>
-                                    <div class="text-group section">
-                                        <p class="txt">This condo is located at 14651 Philipine #5301,
-                                            Houston, TX. 14651 Philipine #5301 is in Houston,
-                                            TX and in ZIP code 77040. This property has 2 
-                                            bedrooms, 2bathrooms and approximately 1,200
-                                            sqft of floor space.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <p>슬라이드 3번입니다</p>
-                                    <p>슬라이드 3번입니다</p>
+                    <div class="tab">
+                        <ul class="tab-item">
+                            <li class="on" data-tab="tab-cont01"><a href="javascript:void(0);" title="선택됨">Overview</a></li>
+                            <li data-tab="tab-cont02"><a href="javascript:void(0);">Local Info</a></li>
+                            <li data-tab="tab-cont03"><a href="javascript:void(0);">Features</a></li>
+                        </ul>
+                        <div id="tab-cont01" class="tab-content">
+                            <div class="form-wrap section">
+                                <p class="tit">Price range</p>
+                                <div class="text-group section">
+                                    <p class="txt">This condo is located at 14651 Philipine #5301, Houston, TX. (ZIP code 77040)
+                                    </p>
+                                    <p class="txt">This property has 2 bedrooms, 2bathrooms and approximately 1,200 sqft of floor space.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </section>
+                        <div id="tab-cont02" class="tab-content dp-none">
+                            <div class="tab-map"></div>
+                            <p class="tit">Description</p>
+                            <div class="text-group section">
+                                <p class="txt">This condo is located at 14651 Philipine #5301,
+                                    Houston, TX. 14651 Philipine #5301 is in Houston,
+                                    TX and in ZIP code 77040. This property has 2 
+                                    bedrooms, 2bathrooms and approximately 1,200
+                                    sqft of floor space.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="tab-cont03" class="tab-content dp-none">
+                            <div class="form-wrap section">
+                                <p class="tit">Features</p>
+                                <div class="text-group section">
+                                    <p class="txt">This condo is located at 14651 Philipine #5301, Houston, TX. 14651 Philipine #5301 is in Houston, TX and in ZIP code 77040.
+                                    </p>
+                                    <p class="txt">This property has 2 bedrooms, 2bathrooms and approximately 1,200 sqft of floor space.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="form-wrap section">
+                        <p class="tit">Agent Info</p>
+                        <div class="text-group section">
+                            <div class="personal-box">
+                                <p>Erik Choi</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
         </form>
@@ -151,22 +158,34 @@
         observeParents: true
     });
 
-    var Swiper = new Swiper('.swiper-image', {
-        slidesPerView: 1,
-        centeredSlides: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'fraction',
-        },
-        virtual: {
-            slides: (function () {
-            const slides = [];
-            for (var i = 0; i < 2; i += 1) {
-                slides.push('Slide ' + (i + 1));
-            }
-            return slides;
-            })(),
-        },
+    // var Swiper = new Swiper('.swiper-image.swiper', {
+    //     slidesPerView: 1,
+    //     spaceBetween: 0,
+    //     centeredSlides: true,
+    //     pagination: {
+    //         el: '.swiper-pagination',
+    //         type: 'fraction',
+    //     },
+    //     virtual: {
+    //         slides: (function () {
+    //         const slides = [];
+    //         for (var i = 0; i < 2; i += 1) {
+    //             slides.push('Slide ' + (i + 1));
+    //         }
+    //         return slides;
+    //         })(),
+    //     },
+    // });
+
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
 </script>
 </html>
