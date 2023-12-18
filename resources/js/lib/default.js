@@ -8,6 +8,15 @@ $(document).ready(function() {
     this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
   });
 
+  // 즐겨찾기 on/off 스크립트 (0703 추가)
+	$(".btn-set.like").click(function(){
+		if( $(this).hasClass("on") ){
+			$(this).removeClass("on");
+		}else{
+			$(this).addClass("on");
+		}
+	});
+
   /** table 의 checkbox **/
   // 클래스 'custom-check'를 사용하여 모든 "checkbox"를 가져옴.
   var checkboxes = document.querySelectorAll('input[type="checkbox"].custom-check');
@@ -104,7 +113,6 @@ $(document).ready(function() {
     // });
 
   });
-    
 
 });
 
@@ -203,6 +211,19 @@ function openPopupUp(id) {
       // Get the text of the clicked list item
       var selectedText = $(this).text();
       
+      $(".ly-select-list > li > button").on('click focusin', function(){
+        //e.preventDefault();
+        var $this = $(this).parent('li');
+        var $item = $(".ly-select-list > li");
+        
+        $item.removeClass('active');
+        if($this.hasClass('active')){
+          $item.removeClass('active');
+        }else{
+          $this.addClass('active');
+        };
+      });
+
       // Apply the selected text to a specific location, for example, a div with ID 'selectedText'
       $('.form-control.select span').text(selectedText);
       

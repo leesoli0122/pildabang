@@ -33,7 +33,7 @@
                         <button class="btn btn-search outline-secondary" type="button">검색</button>
                     </div>
                     <div class="form-group filter">
-                        <a href="#none" class="filter-img">필터</a>
+                        <div href="#none" class="filter-img">필터</div>
                         <ul class="filter-group">
                             <li><a href="#none">아파트,오피스텔</a></li>
                             <li><a href="#none">$880K~ $996K</a></li>
@@ -41,21 +41,12 @@
                         </ul>
                     </div>
                     <div class="form-group filter">
-                        <a href="#none" class="filter-img">필터</a>
+                        <div terms-pop="lyPullPop02" class="filter-img">필터</div>
                         <ul class="filter-group after on" tabindex="1" >
                             <li class="option" onclick="openPopupUp('selBox2');">아파트,오피스텔</li>
                             <li class="option" onclick="openPopupUp('selBox2');">$880K~ $996K</li>
                             <li class="option" onclick="openPopupUp('selBox2');">방 크기(전용면적)</li>
                         </ul>
-                    </div>
-                </section>
-                <section>
-                    <div>
-                        <ul>
-                            <li></li>
-                        </ul>
-                        <p>₱7,000,000</p>
-                        <p></p>
                     </div>
                 </section>
             </div>
@@ -70,17 +61,118 @@
         </div>
     </div>
 </body>
-<div id="selBox2" class="layerpopup laypop-all show" >
+<div id="lyPullPop02" class="layerpopup laypop-all">
     <div class="content-wrap">
-        <div class="pop-header"><span>Filter</span></div>
-        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        <div class="ly-scroll-con ly-select">
-            <ul class="ly-select-list">
-                <!-- <li><button type="button">아파트</button></li>[D] 클래스 active 추가 시 활성화 스타일 노출
-                <li><button type="button">오피스텔</button></li>
-                <li><button type="button">주택</button></li> -->
-            </ul>
+        <div class="pop-header">
+            <h2 class="pop-title">filter</h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
         </div>
+
+        <div class="pop-con-wrap" id="">
+            <div class="default-wrap">
+                <section class="filter">
+                    <div class="custom_slide_wrap">
+                        <div class="swiper-pagination-custom"></div>
+                    </div>
+                    <div class="swiper-bottom">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <section class="form-wrap section">
+                                    <p class="tit">Price range</p>
+                                    <div class="form-group check-buttons">
+                                        <label for="check-1" class="check-button">
+                                            <input type="checkbox" id="check-1" name="terms">
+                                            <span class="custom-check"></span>
+                                            <span class="filter-txt">List price</span>
+                                        </label>
+                                        <label for="check-2" class="check-button">
+                                            <input type="checkbox" id="check-2" name="terms">
+                                            <span class="custom-check"></span>
+                                            <span class="filter-txt">Monthly pament</span>
+                                        </label>
+                                    </div>
+                                    <div class="progress-area">
+                                        <div class="progress-wrap">
+                                            <div class="progress-line">
+                                                <div class="progress-bar" style="width:40%;">
+                                                    <em class="current">₱ 7,000,000</em>
+                                                </div>
+                                            </div>
+                                            <!-- <ul class="progress-txt">
+                                                <li>최근 <span>2023.15.15</span></li>
+                                                <li><span>00회차</span>/<span>00개월</span></li>
+                                            </ul>
+                                            <div class="progress-message">지금까지 잘하고 있어요</div> -->
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="text-group section">
+                                    <p class="tit">Calculate your budget</p>
+                                    <p class="txt">Find out how much you can comfortably spend on a home</p>
+                                </section>
+                                <section class="form-wrap">
+                                    <p class="tit">Bedrooms</p>
+                                    <div class="form-group">
+                                        <div class="form-control select" onclick="openPopupUp('lySel')" tabindex="0">
+                                            <a href="#none" tabindex="-1"><span>No Min</span></a>
+                                        </div>
+                                        <div class="form-control select" onclick="openPopupUp('lySel')" tabindex="0">
+                                            <a href="#none" tabindex="-1"><span>No Mex</span></a>
+                                        </div>
+                                    </div>
+                                    <p class="tit">Bathrooms</p>
+                                    <div class="form-group">
+                                        <div class="form-control select" onclick="openPopupUp('lySel')" tabindex="0">
+                                            <a href="#none" tabindex="-1"><span>Any</span></a>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="form-wrap section">
+                                    <p class="tit">Price range</p>
+                                    <div class="form-group check-buttons column">
+                                        <label for="check-1" class="check-button">
+                                            <input type="checkbox" id="check-1" name="terms">
+                                            <span class="custom-check"></span>
+                                            <span class="filter-txt">Houses</span>
+                                        </label>
+                                        <label for="check-2" class="check-button">
+                                            <input type="checkbox" id="check-2" name="terms">
+                                            <span class="custom-check"></span>
+                                            <span class="filter-txt">Townhomest</span>
+                                        </label>
+                                        <label for="check-3" class="check-button">
+                                            <input type="checkbox" id="check-2" name="terms">
+                                            <span class="custom-check"></span>
+                                            <span class="filter-txt">Apartment</span>
+                                        </label>
+                                        <label for="check-4" class="check-button">
+                                            <input type="checkbox" id="check-2" name="terms">
+                                            <span class="custom-check"></span>
+                                            <span class="filter-txt">Condos/Co-ops</span>
+                                        </label>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>슬라이드 2번입니다</p>
+                                <p>슬라이드 2번입니다</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>슬라이드 3번입니다</p>
+                                <p>슬라이드 3번입니다</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-primary">확인했어요</button>
+            </div>
+        </section>
     </div>
 </div>
+
 </html>
