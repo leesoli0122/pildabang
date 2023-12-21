@@ -19,15 +19,14 @@
 <body>
     <div class="wrap">
         <!-- //header -->
-        <header id="lnb">
-            <a href="javascript:void(0);" onclick="" class="btn_prev header-btn">이전</a>
-            <div class="btn-group header-btn">
-                <a href="javascript:void(0)" class="heart">하트</a>
-                <a href="javascript:void(0)" class="btn_menu" onclick="openMenu('menuWrap')">메뉴</a>
-                <!-- <a href="javascript:void(0)" class="btn_menu_white">메뉴</a> -->
-            </div>
-        </header>
-        <!-- header// -->
+        <div id="lnb">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#lnb").load("../include/inc_header.html");
+			});
+			</script>
+        </div>
         <form>
             <div class="contents-wrap">
                 <section>
@@ -114,13 +113,48 @@
                 <section>
                     <div class="form-wrap section">
                         <p class="tit">Agent Info</p>
-                        <div class="text-group section">
-                            <div class="personal-box">
-                                <p>Erik Choi</p>
+                        <div class="personal-box text-group">
+                            <p class="tit">Erik Choi</p>
+                            <p class="txt">Personal trader</p>
+                        </div>
+                    </div>
+                    <div class="form-wrap section">
+                        <p class="tit">Similar Listing</p>
+                        <div class="list-group2">
+                            <div class="img-list">
+                                <img src="../../resources/images/common/image_1.png" alt="방1">
+                                <a href="#none" class="btn-set like" id="oftnAcct" onclick="oftnAcct(this);">찜</a>
+                                <ul class="list-txt">
+                                    <li class="list-tit">₱7,000,000</li>
+                                    <li class="ic-room">2</li>
+                                </ul>
+                                <ul class="list-txt">
+                                    <li class="list-sub-tit">₱140,000 PSM
+                                    </li>
+                                    <li class="ic-bathtub">2</li>
+                                </ul>
+                            </div>
+                            <div class="img-list">
+                                <img src="../../resources/images/common/image_2.png" alt="방1">
+                                <a href="#none" class="btn-set like" id="oftnAcct" onclick="oftnAcct(this);">찜</a>
+                                <ul class="list-txt">
+                                    <li class="list-tit">₱7,000,000</li>
+                                    <li class="ic-room">2</li>
+                                </ul>
+                                <ul class="list-txt">
+                                    <li class="list-sub-tit">₱140,000 PSM
+                                    </li>
+                                    <li class="ic-bathtub">2</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </section>
+                <div class="fixed-btn-wrap relative">
+                    <div class="btn-cont-wrap"><!-- [D] 한줄에 버튼 들어갈 경우 div.btn-wrap에 type-multi 클래스 추가 -->
+                        <a href="#none" class="btn btn-primary">Call</a>
+                    </div>
+                </div>
             </div>
         </form>
     </div>

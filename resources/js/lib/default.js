@@ -26,6 +26,34 @@ $(document).ready(function() {
     $("#" + tabCont).removeClass("dp-none");
   });
 
+  /** 이미지 불러오기 **/
+  var sel_files = [];
+    $(document).ready(function(){
+        $('#file').on('change', handleImgsFilesSelect);
+    });
+    function handleImgsFilesSelect(e){
+        var files = e.target.files;
+        var filesArr = Array.prototype.slice.call(files);
+
+        filesArr.forEach(function(f){
+            sel_files.push(f);
+
+            var reader = new FileReader();
+            reader.onload = function(e){
+                var img_html = '<li class="delete"><img src=\'' + e.target.result + '\' /></li>';
+                $('.ip-file').append(img_html);
+                // img_html.addClass('delete');
+            }
+            reader.readAsDataURL(f);
+        })
+    }
+    /** 이미지 불러오기 삭제 **/
+    $('.thumb-wrap ul').on('click', '.delete', function(e) {
+        e.stopPropagation();//중단
+
+        $(this).remove();
+    });
+
   /** table 의 checkbox **/
   // 클래스 'custom-check'를 사용하여 모든 "checkbox"를 가져옴.
   var checkboxes = document.querySelectorAll('input[type="checkbox"].custom-check');
