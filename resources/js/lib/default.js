@@ -40,9 +40,9 @@ $(document).ready(function() {
 
 	//툴팁 닫기
 	$(".tooltip-close").on('click', function(){
-		var $this = $(this).parents(".tooltip-wrap");		
+		var $this = $(this).parents(".tooltip-wrap");
 		$this.removeClass('on');
-	});	
+	});
 
   /** 이미지 불러오기 **/
   var sel_files = [];
