@@ -18,13 +18,31 @@ $(document).ready(function() {
 	});
 
   //tab
-  $(".tab-item > li").click(function(){
+  $(".tab-item > li ,.style2 > li").click(function(){
     var tabCont = $(this).attr("data-tab");
     $(this).siblings().removeClass("on");
     $(this).addClass("on");
     $(this).closest("ul").siblings().addClass("dp-none");
     $("#" + tabCont).removeClass("dp-none");
   });
+
+  //툴팁
+	$(".info-tooltip").on('click', function(){
+		var $this = $(this).parents(".tooltip-wrap");
+
+		$this.removeClass('on');
+		if($this.hasClass('on')){
+			$this.removeClass('on');
+		}else{
+			$this.addClass('on');
+		};
+	});
+
+	//툴팁 닫기
+	$(".tooltip-close").on('click', function(){
+		var $this = $(this).parents(".tooltip-wrap");		
+		$this.removeClass('on');
+	});	
 
   /** 이미지 불러오기 **/
   var sel_files = [];

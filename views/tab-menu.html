@@ -17,23 +17,33 @@
 </head>
 <style>
     /* 스타일은 가져가는 거 아님 */
-    .guide { background-color:#C9C9C9 ; }
+    .guide { background-color:#ffffff ; }
     .guide > h2 {padding: 25px 10px 10px; font-weight: 500; font-size: 1rem;}
     /*가져갈 때 클래스 빼서 가져가기*/
     .relative { position: relative; background-color: #ffffff; }
     .black { background-color: #000000; }
+    .pd-left { padding-left:20px; }
+    .pd-bottom { padding-bottom: 20px; }
+</style>
+<style>
+    /* tab style2 */
+    .style2 { display: flex; justify-content: space-around; background-color: #F0E9FA; }
+    .style2 li { margin: 5px; padding: 15px 0; width: calc(100% / 2); border-radius:10px; }
+    .style2 li a { display:block; width:100%; color:var(--text02);  ; text-align:center; font-size:var(--font-16); font-weight:600; }
+    .style2 li.on { background-color: #B095DC; }
+    .style2 li.on a { color:#ffffff; }
 </style>
 
 <body>
     <div class="wrap">
         <!-- //header -->
         <div class="guide">
-            <h2>· 슬라이딩 </h2>
-            <section>
+            <h2 style="background-color:#C9C9C9;">· 슬라이딩 </h2>
+            <section class="pd-bottom">
                 <div class="custom_slide_wrap">
                     <div class="swiper-pagination-custom"></div>
                 </div>
-                <div class="swiper-bottom">
+                <div class="swiper-bottom pd-left">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <p>슬라이드 1번입니다</p>
@@ -50,10 +60,79 @@
                     </div>
                 </div>
             </section>
-            <h2>· select 슬라이딩 </h2>
-            <section>
-                <div class="tabs">
-                    
+            <h2 style="background-color:#C9C9C9;">· select tab </h2>
+            <section class="pd-bottom">
+                <div class="tab">
+                    <ul class="tab-item">
+                        <li class="on" data-tab="tab-cont01"><a href="javascript:void(0);" title="선택됨">Overview</a></li>
+                        <li data-tab="tab-cont02" class=""><a href="javascript:void(0);">Local Info</a></li>
+                        <li data-tab="tab-cont03" class=""><a href="javascript:void(0);">Features</a></li>
+                    </ul>
+                    <div id="tab-cont01" class="tab-content">
+                        <div class="form-wrap section pd-left">
+                            <p class="tit">Price range</p>
+                            <div class="text-group section">
+                                <p class="txt">This condo is located at 14651 Philipine #5301, Houston, TX. (ZIP code 77040)
+                                </p>
+                                <p class="txt">This property has 2 bedrooms, 2bathrooms and approximately 1,200 sqft of floor space.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-cont02" class="tab-content dp-none">
+                        <div class="tab-map"></div>
+                        <p class="tit">Description</p>
+                        <div class="text-group section pd-left">
+                            <p class="txt">This condo is located at 14651 Philipine #5301,
+                                Houston, TX. 14651 Philipine #5301 is in Houston,
+                                TX and in ZIP code 77040. This property has 2 
+                                bedrooms, 2bathrooms and approximately 1,200
+                                sqft of floor space.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="tab-cont03" class="tab-content dp-none">
+                        <div class="form-wrap section pd-left">
+                            <p class="tit">Features</p>
+                            <div class="text-group section">
+                                <p class="txt">This condo is located at 14651 Philipine #5301, Houston, TX. 14651 Philipine #5301 is in Houston, TX and in ZIP code 77040.
+                                </p>
+                                <p class="txt">This property has 2 bedrooms, 2bathrooms and approximately 1,200 sqft of floor space.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h2 style="background-color:#C9C9C9;">· div 안에 tab </h2>
+            <section class="pd-bottom">
+                <div class="tab">
+                    <ul class="style2">
+                        <li class="on" data-tab="tab-cont04"><a href="javascript:void(0);" title="선택됨">Overview</a></li>
+                        <li data-tab="tab-cont05" class=""><a href="javascript:void(0);">Local Info</a></li>
+                    </ul>
+                    <div id="tab-cont04" class="tab-content">
+                        <div class="form-wrap section pd-left">
+                            <p class="tit">Price range</p>
+                            <div class="text-group section">
+                                <p class="txt">This condo is located at 14651 Philipine #5301, Houston, TX. (ZIP code 77040)
+                                </p>
+                                <p class="txt">This property has 2 bedrooms, 2bathrooms and approximately 1,200 sqft of floor space.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-cont05" class="tab-content dp-none">
+                        <div class="form-wrap section pd-left">
+                            <p class="tit">Features</p>
+                            <div class="text-group section">
+                                <p class="txt">This condo is located at 14651 Philipine #5301, Houston, TX. 14651 Philipine #5301 is in Houston, TX and in ZIP code 77040.
+                                </p>
+                                <p class="txt">This property has 2 bedrooms, 2bathrooms and approximately 1,200 sqft of floor space.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
