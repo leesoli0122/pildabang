@@ -17,11 +17,12 @@
     <div class="wrap">
         <!-- //header -->
         <header id="lnb">
-            <a href="javascript:void(0);" onclick="" class="btn-prev header-btn">이전</a>
-            <h1>
-                <img src="../../resources/images/common/logo.png" alt="로고">
-            </h1>
-            <a href="javascript:void(0)" class="btn-menu header-btn">메뉴</a>
+            <script>
+                $(document).ready(function(){
+                    document.charset="euc-kr";
+                    $("#lnb").load("../include/inc_header.html");
+                });
+            </script>
         </header>
         <!-- header// -->
         <form>
@@ -44,9 +45,11 @@
                 </section>
 
                 <section class="fixed-btn-wrap">
-                    <div class="btn-wrap">
-                        <button type="button" class="btn btn-primary">다음</button>
-                        <button type="button" class="btn btn-txt">그만하기</button>
+                    <div class="fixed-btn-wrap relative">
+                        <div class="btn-cont-wrap">
+                            <a href="information5.html" class="btn btn-txt">Prev</a>
+                            <a href="information7.html" class="btn btn-primary">Next</a>
+                        </div>
                     </div>
                 </section>
             </div>

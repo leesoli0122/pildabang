@@ -17,13 +17,24 @@
 <body>
     <div class="wrap">
         <!-- //header -->
-        <header id="lnb" class="relative">
+        <header id="lnb">
             <a href="javascript:void(0);" onclick="" class="btn-prev header-btn">이전</a>
             <h1>
                 <img src="../resources/images/common/logo.png" alt="로고">
             </h1>
             <a href="javascript:void(0)" class="btn-menu header-btn">메뉴</a>
         </header>
+        <!-- //header -->
+        <!-- s:menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("./include/inc_menu.html");
+            });
+            </script>
+        </div>
+	    <!-- e:menuWrap -->
         <form>
             <div class="contents-wrap">
                 <section class="form-wrap">

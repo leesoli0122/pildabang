@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
   /**  3자리 수마다 콤마 적용 **/
@@ -43,34 +42,6 @@ $(document).ready(function() {
 		var $this = $(this).parents(".tooltip-wrap");
 		$this.removeClass('on');
 	});
-
-  /** 이미지 불러오기 **/
-  var sel_files = [];
-    $(document).ready(function(){
-        $('#file').on('change', handleImgsFilesSelect);
-    });
-    function handleImgsFilesSelect(e){
-        var files = e.target.files;
-        var filesArr = Array.prototype.slice.call(files);
-
-        filesArr.forEach(function(f){
-            sel_files.push(f);
-
-            var reader = new FileReader();
-            reader.onload = function(e){
-                var img_html = '<li class="delete"><img src=\'' + e.target.result + '\' /></li>';
-                $('.ip-file').append(img_html);
-                // img_html.addClass('delete');
-            }
-            reader.readAsDataURL(f);
-        })
-    }
-    /** 이미지 불러오기 삭제 **/
-    $('.thumb-wrap ul').on('click', '.delete', function(e) {
-        e.stopPropagation();//중단
-
-        $(this).remove();
-    });
 
   /** table 의 checkbox **/
   // 클래스 'custom-check'를 사용하여 모든 "checkbox"를 가져옴.
@@ -124,27 +95,43 @@ $(document).ready(function() {
 
     var dmTotalNum	= $(".level3 .check").length;
     var dmCheckNum = $(".level3 .check:checked").length;
+   
+    var terms_id = $(this).attr("terms-pop"); // Get the ID of the clicked element
+    // $("#" + terms_id).show(); // Show the associated popup with the same ID when the element is clicked
     
-    // terms-pop 약관 팝업
-    // var terms_id = $(this).attr('terms-pop');
-    // $(".layerpopup").removeClass('on');
-    // $("#"+terms_id).addClass('on');
-    // $('body').css("overflow", "auto");
-    $(".check").on("change", function() {
-      var popupID = $(this).attr("terms-pop"); // Get the ID of the associated popup
-      var isChecked = $(this).is(":checked"); // Check if the checkbox is checked
+    if ($(this).prop("checked")) {
+        $("#" + terms_id).show(); // Show the associated popup with the same ID when the element is clicked
+    } else {
+        $("#" + terms_id).hide(); // Hide the associated popup when the checkbox is unchecked
+    }
+
+    $(".layerpopup .btn.btn-primary").on("click", function() {
+      var popup = $(this).closest('.layerpopup');
+      var popupID = popup.attr("id"); // Get the ID of the popup
     
-      if (isChecked) {
-        $("#" + popupID).show(); // Show the associated popup when the checkbox is checked
-      } else {
-        $("#" + popupID).hide(); // Hide the associated popup when the checkbox is unchecked
-      }
-    });
+      // Extract the terms-pop function ID from the popup ID
+      var termsPopID = popupID.replace("-popup", "");
     
-    $(".btn-layer-close").on("click", function() {
-      $(this).closest('.layerpopup').hide(); // Hide the closest popup when the close button is clicked
+      // Check the associated checkbox for the terms-pop function
+      $("[terms-pop='" + termsPopID + "']").prop("checked", true);
+
+      popup.hide();
     });
 
+    $(".btn-layer-close").on("click", function() {
+      var popup = $(this).closest('.layerpopup');
+      var popupID = popup.attr("id"); // Get the ID of the popup
+    
+      // Extract the terms-pop function ID from the popup ID
+      var termsPopID = popupID.replace("-popup", "");
+    
+      // Check the associated checkbox for the terms-pop function
+      $("[terms-pop='" + termsPopID + "']").prop("checked", false);
+
+      popup.hide();
+    });
+    /*e : 2023-12-12 추가*/
+    
     if (!$(this).parent().parent('div.level3').hasClass('etc')) {
       //약관 개별동의
       if (totalNum == checkNum) {
@@ -161,13 +148,38 @@ $(document).ready(function() {
       };
       agreeChek();
     };
-    // // terms-pop 약관 팝업
-    // $('.btn-layer-close').on('click', function() {
-    //   $(".layerpopup").removeClass('on');
-    //   $('body').css("overflow", "auto");
-    // });
 
   });
+
+    /** 이미지 불러오기 **/
+    var sel_files = [];
+    $(document).ready(function(){
+        $('#file').on('change', handleImgsFilesSelect);
+    });
+    function handleImgsFilesSelect(e){
+        var files = e.target.files;
+        var filesArr = Array.prototype.slice.call(files);
+
+        filesArr.forEach(function(f){
+            sel_files.push(f);
+
+            var reader = new FileReader();
+            reader.onload = function(e){
+                var img_html = '<li class="delete"><img src=\'' + e.target.result + '\' /></li>';
+                $('.ip-file').append(img_html);
+                // img_html.addClass('delete');
+            }
+            reader.readAsDataURL(f);
+        })
+    }
+    /** 이미지 불러오기 삭제 **/
+    $('.thumb-wrap ul').on('click', '.delete', function(e) {
+        e.stopPropagation();//중단
+
+        $(this).remove();
+    });
+
+    $()
 
 });
 
@@ -184,7 +196,7 @@ $(document).ready(function() {
 function layerFunc(_target) {
 
   if (_target.hasClass('laypop-all')) {
-    //전체풀팝업일경우 dimmed 생기지않음 2020-04-10
+    //전체풀팝업일경우 dimmed 생기지않음
 
   } else {
     if (_target.outerHeight() > $(window).height()) {
@@ -201,7 +213,7 @@ function layerFunc(_target) {
         }
       }
     }
-  }
+}
 
 //block
 var winScrollTop;
@@ -215,10 +227,11 @@ function deleteBlock(_full) {
     $('.block').fadeOut(300);
     $('.block').remove();
   }
-  $('body, html, .wrap').css({ 'height': '', 'overflow': '' });
+  $('html, .wrap').css({ 'height': '', 'overflow': '' });
   $('body').removeAttr('style');
   $(window).scrollTop(winScrollTop);
 }
+
 
 // popup
 function openPopup(id) {
@@ -231,16 +244,14 @@ function openPopup(id) {
     $(window).scrollTop(currentTop);
   });
   if (_target.hasClass('layer-up')) {
-
-  } else if (_target.hasClass('type-alert')){
-	_target.fadeIn(600);
-    _target.focus();
-	_target.addClass("on");
-  
-  }else{
     _target.fadeIn(600);
-	_target.addClass("on");
     _target.focus();
+    _target.addClass("on");
+  } else if (_target.hasClass('type-alert')){
+  // _target.css('top','0');
+	_target.fadeIn(600);
+  _target.focus();
+	_target.addClass("on");
   }
 }
 
@@ -262,43 +273,18 @@ function openPopupUp(id) {
   });
 
   if (_target.has('.ly-select-list').length > 0) {
-    _target.find('.ly-select-list > li > button').not('.ly-select-list.non-click > li > button').on('click', function () {
-      // Get the text of the clicked list item
+    _target.find('.ly-select-list > li > button').on('click', function () {
+      
       var selectedText = $(this).text();
       
-      $(".ly-select-list > li > button").on('click focusin', function(){
-        //e.preventDefault();
-        var $this = $(this).parent('li');
-        var $item = $(".ly-select-list > li");
-        
-        $item.removeClass('active');
-        if($this.hasClass('active')){
-          $item.removeClass('active');
-        }else{
-          $this.addClass('active');
-        };
-      });
-
-      // Apply the selected text to a specific location, for example, a div with ID 'selectedText'
-      $('.form-control.select span').text(selectedText);
+      $('[onclick="openPopupUp(\'' + id + '\')"]').closest('.form-control.select.between').find('span').text(selectedText);
       
       closePopupUp(id);
       $('body').removeAttr('style');
       $(window).scrollTop(currentTop);
       _target.removeClass('show');
     });
-    
-  }
-  if (_target.has('.ly-acc-select').length > 0) {
-    _target.find('.ly-acc-select > .acc-list-area > a').on('click', function (e) {
-      closePopupUp(id);
-      $('body').removeAttr('style');
-      $(window).scrollTop(currentTop);
-      _target.removeClass('show');
-      e.preventDefault();
-    });
 
-    
   }
 }
 
@@ -343,6 +329,7 @@ function getCenterAlignPos(containerSize, targetSize) {
   var pos = (containerSize - targetSize) / 2;
   return pos;
 }
+
 
 
 

@@ -39,12 +39,19 @@
                                 </li>
                             </ul>
                             <p class="list-tit">₱7,000,000</p>
-                            <a href="#none" class="btn-set like" id="oftnAcct" onclick="oftnAcct(this);">찜</a>
-                            <ul class="list-txt">
-                                <li class="list-sub-tit">₱140,000 PSM</li>
-                                <li class="ic-room">2</li>
-                                <li class="ic-bathtub">2</li>
-                            </ul>
+                            <a href="#none" class="btn-set like on">찜</a>
+                            <div class="list-txt">
+                                <div class="list-sub-tit tooltip-wrap">₱140,000 PSM
+                                    <div class="info-tooltip">정보</div>
+                                    <div class="tooltip-txt">
+                                        <p>PSM</p>
+                                        <p>means ‘per square meter’</p>
+                                        <button type="button" class="tooltip-close">닫기</button>
+                                    </div>
+                                </div>
+                                <span class="ic-room">2</span>
+                                <span class="ic-bathtub">2</span>
+                            </div>
                         </div>
                         <div class="list-group">
                             <ul class="img-list">
@@ -56,12 +63,19 @@
                                 </li>
                             </ul>
                             <p class="list-tit">₱7,000,000</p>
-                            <a href="#none" class="btn-set like" id="oftnAcct" onclick="oftnAcct(this);">찜</a>
-                            <ul class="list-txt">
-                                <li class="list-sub-tit">₱140,000 PSM</li>
-                                <li class="ic-room">2</li>
-                                <li class="ic-bathtub">2</li>
-                            </ul>
+                            <a href="#none" class="btn-set like on">찜</a>
+                            <div class="list-txt">
+                                <div class="list-sub-tit tooltip-wrap">₱140,000 PSM
+                                    <div class="info-tooltip">정보</div>
+                                    <div class="tooltip-txt">
+                                        <p>PSM</p>
+                                        <p>means ‘per square meter’</p>
+                                        <button type="button" class="tooltip-close">닫기</button>
+                                    </div>
+                                </div>
+                                <span class="ic-room">2</span>
+                                <span class="ic-bathtub">2</span>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -76,26 +90,4 @@
 	<!-- //footer -->
 
 </body>
-
-
-    <script>
-        var text = ['For Sale','Local Info','Features'];
-        var bottomSwiper = new Swiper('.swiper-bottom', {
-            slidesPerView: '1',
-            pagination: {
-                el: ".swiper-pagination-custom",
-                clickable: true,
-                bulletClass:"custom_bullet",
-                bulletActiveClass: "swiper-pagination-custom-bullet-active",
-                renderBullet: function (index, className) {
-                return '<div class="'+className+'"><span>'+ (text[index]) +'</span></div>'
-                },
-            },
-            allowTouchMove : false,
-            loop: true,
-            touchRatio: 0.2,
-            observer: true,
-            observeParents: true,
-        });
-    </script>
 </html>

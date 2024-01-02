@@ -10,7 +10,6 @@
 
     <script type="text/javascript" src="../../resources/js/lib/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
-    <script type="text/javascript" src="../../resources/js/lib/ui.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -28,17 +27,19 @@
             <div class="contents-wrap">
                 <section>
                     <div class="info-img-group">
-                        <div class="info-img info3"></div>
-                        <p>Enter the address</p>
+                        <div class="info-img info10"></div>
+                        <p>Write property introduce</p>
                     </div>
-                    <div class="form-wrap">
-
+                    <div class="text-area line-none">
+                        <textarea type="text" title="성명" id="ipt02" class="inp" name="" value="" placeholder="content" maxlength="" required=""></textarea>
                     </div>
                 </section>
                 <section class="fixed-btn-wrap">
-                    <div class="btn-cont-wrap">
-                        <a href="information2.html" class="btn btn-info">Prev</a>
-                        <a href="information4.html" class="btn btn-primary">Next</a>
+                    <div class="fixed-btn-wrap relative">
+                        <div class="btn-cont-wrap">
+                            <a href="information9.html" class="btn btn-txt">Prev</a>
+                            <a href="information11_1.html" class="btn btn-primary">Next</a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -46,18 +47,3 @@
     </div>
 </body>
 </html>
-<div id="lySel" class="layerpopup layer-up" tabindex="0"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
-    <div class="content-wrap">
-        <div class="pop-header">
-            <h2 class="pop-title">Transation method</h2>
-            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-        </div>
-        <div class="ly-scroll-con ly-select">
-            <ul class="ly-select-list">
-                <li><button>Landlord</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                <li><button>Tenant</button></li>
-                <li><button>Agent</button></li>
-            </ul>
-        </div>
-    </div>
-</div>

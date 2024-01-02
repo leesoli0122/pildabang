@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+
+    <script type="text/javascript" src="../../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <header id="lnb">
+            <script>
+                $(document).ready(function(){
+                    document.charset="euc-kr";
+                    $("#lnb").load("../include/inc_header.html");
+                });
+            </script>
+        </header>
+        <!-- header// -->
+        <form>
+            <div class="contents-wrap">
+                <!-- <section>
+                    <div class="info-img-group">
+                        <div class="info-img info6"></div>
+                        <p>Check information before registering</p>
+                    </div>
+                </section> -->
+                <section class="check-information">
+                    <div class="text-group">
+                        <p class="tit">Edit post</p>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="information6.html">
+                                    <img src="../../resources/images/common/image_1.png" alt="방1">
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="information6.html">
+                                    <img src="../../resources/images/common/image_2.png" alt="방2">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="info-form-wrap">
+                        <div class="info-group between">
+                            <div class="info-control">
+                                <p>Author</P>
+                                <a href="information1.html"><span>Landlord</span></a>
+                            </div>
+                        </div>
+                        <div class="info-group between">
+                            <div class="info-control">
+                                <p>Building type</P>
+                                <a href="information2.html"><span>Apartment</span></a>
+                            </div>
+                        </div>
+                        <div class="text-group">
+                            <p class="tit">Address</p>
+                        </div>
+                        <div class="info-group2">
+                            <a href="information3.html"><span>14651 Philipine #5301, Houston, TX</span></a>
+                        </div>
+                        <div class="text-group">
+                            <p class="tit">Transaction method</p>
+                        </div>
+                        <div class="info-group2">
+                            <a href="information3.html"><span>Sale ₱7,000,000</span></a>
+                        </div>
+                        <div class="text-group">
+                            <p class="tit">Property information</p>
+                        </div>
+                        <div class="info-group2">
+                            <a href="information3.html">
+                                <span>1,200 sqft</span>
+                                <span>15 Floor</span>
+                                <span>3 Beds / 2 Baths</span>
+                            </a>
+                        </div>
+                        <div class="text-group">
+                            <p class="tit">Conditions of occupancy</p>
+                        </div>
+                        <div class="info-group between">
+                            <div class="info-control">
+                                <p>Loan</P>
+                                <a href="information1.html"><span>Available</span></a>
+                            </div>
+                        </div>
+                        <div class="info-group between">
+                            <div class="info-control">
+                                <p>Pet</P>
+                                <a href="information1.html"><span>Confirm</span></a>
+                            </div>
+                        </div>
+                        <div class="info-group between">
+                            <div class="info-control">
+                                <p>Parking</P>
+                                <a href="information1.html"><span>Available</span></a>
+                            </div>
+                        </div>
+                        <div class="text-group">
+                            <p class="tit">Property introduce</p>
+                        </div>
+                        <div class="info-group2">
+                            <a href="information3.html">
+                                <span>This condo is located at 14651 Philipp
+                                    ine #5301, Houston, TX.
+                                    <br>
+                                    <br>
+                                    14651 Philipine #5301 is in Houston,
+                                    TX and in ZIP code 77040.
+                                    <br>
+                                    <br>
+                                    This property has 2 bedrooms, 2bath
+                                    rooms and approximately 1,200 sqft
+                                    of floor space.
+                                    </span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="fixed-btn-wrap">
+                    <div class="fixed-btn-wrap relative">
+                        <div class="btn-cont-wrap">
+                            <a href="information10.html" class="btn btn-txt">Prev</a>
+                            <a href="../list/list2.html" class="btn btn-primary">Next</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        }
+    });
+</script>
+
+</html>

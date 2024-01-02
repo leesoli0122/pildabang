@@ -19,14 +19,25 @@
 <body>
     <div class="wrap">
         <!-- //header -->
-        <div id="lnb">
-			<script>
-			$(document).ready(function(){
-				document.charset="euc-kr";
-				$("#lnb").load("../include/inc_header.html");
-			});
-			</script>
+        <header id="lnb">
+            <script>
+                $(document).ready(function(){
+                    document.charset="euc-kr";
+                    $("#lnb").load("../include/inc_header_act.html");
+                });
+            </script>
+        </header>
+        <!-- header// -->
+        <!-- s:menuWrap -->
+        <div id="menuWrap">
+            <script>
+            $(document).ready(function(){
+                document.charset="euc-kr";
+                $("#menuWrap").load("../include/inc_menu.html");
+            });
+            </script>
         </div>
+        <!-- e:menuWrap -->
         <form>
             <div class="contents-wrap">
                 <section>
@@ -45,7 +56,7 @@
                             </div>
                         </div>
                         <p class="list-tit">₱7,000,000</p>
-                        <a href="#none" class="btn-set like" id="oftnAcct" onclick="oftnAcct(this);">찜</a>
+                        <a href="#none" class="btn-set like">찜</a>
                         <ul class="list-txt">
                             <li class="list-sub-tit">2256 Philippine Dr Clearwater, FL 33763</li>
                         </ul>
@@ -91,7 +102,7 @@
                             <div class="text-group section">
                                 <p class="txt">This condo is located at 14651 Philipine #5301,
                                     Houston, TX. 14651 Philipine #5301 is in Houston,
-                                    TX and in ZIP code 77040. This property has 2 
+                                    TX and in ZIP code 77040. This property has 2
                                     bedrooms, 2bathrooms and approximately 1,200
                                     sqft of floor space.
                                 </p>
@@ -123,7 +134,7 @@
                         <div class="list-group2">
                             <div class="img-list">
                                 <img src="../../resources/images/common/image_1.png" alt="방1">
-                                <a href="#none" class="btn-set like" id="oftnAcct" onclick="oftnAcct(this);">찜</a>
+                                <a href="#none" class="btn-set like">찜</a>
                                 <ul class="list-txt">
                                     <li class="list-tit">₱7,000,000</li>
                                     <li class="ic-room">2</li>
@@ -136,7 +147,7 @@
                             </div>
                             <div class="img-list">
                                 <img src="../../resources/images/common/image_2.png" alt="방1">
-                                <a href="#none" class="btn-set like" id="oftnAcct" onclick="oftnAcct(this);">찜</a>
+                                <a href="#none" class="btn-set like">찜</a>
                                 <ul class="list-txt">
                                     <li class="list-tit">₱7,000,000</li>
                                     <li class="ic-room">2</li>
@@ -172,6 +183,7 @@
         </div>
     </div>
 </div>
+
 <script>
     var text = ['Overview','Local Info','Features'];
     var bottomSwiper = new Swiper('.swiper-bottom', {
@@ -191,25 +203,6 @@
         observer: true,
         observeParents: true
     });
-
-    // var Swiper = new Swiper('.swiper-image.swiper', {
-    //     slidesPerView: 1,
-    //     spaceBetween: 0,
-    //     centeredSlides: true,
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         type: 'fraction',
-    //     },
-    //     virtual: {
-    //         slides: (function () {
-    //         const slides = [];
-    //         for (var i = 0; i < 2; i += 1) {
-    //             slides.push('Slide ' + (i + 1));
-    //         }
-    //         return slides;
-    //         })(),
-    //     },
-    // });
 
     var swiper = new Swiper(".mySwiper", {
       pagination: {

@@ -7,31 +7,23 @@
                     <a onclick="" class="btn-menu-close">닫기</a>
 				</div>
 				<div class="right-menu">
-                    <a href="javascript:void(0)" class="heart">하트</a>
+                    <a href="javascript:void(0)" onclick="openPopupUp('lyPullPop02')" class="heart">하트</a>
                     <a href="javascript:void(0)" class="setting">설정</a>
 				</div>
 			</div>
-			<div class="login-wrap menu login">
-				<div class="login-tit user-m-img">
-					<p class="tit"><strong>Kate Perry</strong></p>
-					<p class="text">kateperrt1004@gmail.com</p>
-				</div>
+			<div class="login">
+				<a href="#none" class="login-tit user-m-img">
+					<div class="tit"><strong>Kate Perry</strong></div>
+					<div class="text">kateperrt1004@gmail.com</div>
+				</a>
 				<!-- <button class="btn logout-text" type="button">로그아웃</button> -->
 			</div>
 		</div>
 		<div class="all-menu-area">
             <ul class="menuArea">
-                <li class="on"><a href="#none" data-focus="1" >최근 사용한 메뉴</a></li>
-                <li><a href="#none" data-focus="2" >중고차</a></li>
-                <li><a href="#none" data-focus="3">재고금융</a></li>
-                <li><a href="#none"  data-focus="4">신차</a></li>
-                <li><a href="#none"  data-focus="5">일반설비</a></li>
-                <li><a href="#none"  data-focus="6">건설기계/상용</a></li>
-                <li><a href="#none"  data-focus="7">취급실적조회</a></li>
-                <li><a href="#none"  data-focus="8">마이페이지</a></li>
-                <li><a href="#none"  data-focus="9">공지사항</a></li>
-                <li><a href="#none"  data-focus="10">push 알림</a></li>
-                <li><a href="#none"  data-focus="11">금융계산기</a></li>
+                <li><a href="../../views/post/my_post1.html" data-focus="2" >My post</a></li>
+                <li><a href="#none" data-focus="3">FAQ</a></li>
+                <li><a href="#none"  data-focus="4">App Setting</a></li>
             </ul>
 		</div>
 	</div>
@@ -39,27 +31,9 @@
 <!-- e:menuWrap -->
 
 <script>
-		
-/** 전체 메뉴 **/
-
-// menuArea
-$(".menuArea > li > a").on("click", function () {
-	var $this = $(this).parent("li");
-	target = $(this).attr("data-focus");
-	$(".menuArea > li").removeClass("on");
-	$(".listArea > li").removeClass("on");
-
-	$this.addClass("on");
-	$(".listArea > li."+target).addClass("on");
-
-	$(".scroll-wrap").scrollTop(0);
-});
-
-
-
 // menu open, close
 $(document).ready(function() {
-  $('.btn-menu').on('click', function() {
+  $('.btn-menu, .btn-menu-white').on('click', function() {
     $('#menuWrap').addClass('menu-open');
 	  
   });
@@ -71,3 +45,68 @@ $(document).ready(function() {
 
 
 </script>
+
+<div id="lyPullPop02" class="layerpopup laypop-all">
+    <div class="content-wrap">
+        <div class="pop-header">
+            <h2 class="pop-title">Bookmarked Listing
+            </h2>
+            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+        </div>
+
+        <div class="pop-con-wrap" id="">
+            <div class="default-wrap">
+                <section class="list-wrap">
+                    <div class="list-group">
+                        <ul class="img-list">
+                            <li>
+                                <img src="../../resources/images/common/image_1.png" alt="방1">
+                            </li>
+                            <li>
+                                <img src="../../resources/images/common/image_2.png" alt="방2">
+                            </li>
+                        </ul>
+                        <p class="list-tit">₱7,000,000</p>
+                        <a href="#none" class="btn-set like on">찜</a>
+                        <div class="list-txt">
+                            <div class="list-sub-tit tooltip-wrap">₱140,000 PSM
+                                <div class="info-tooltip">정보</div>
+                                <div class="tooltip-txt">
+                                    <p>PSM</p>
+                                    <p>means ‘per square meter’</p>
+                                    <button type="button" class="tooltip-close">닫기</button>
+                                </div>
+                            </div>
+                            <span class="ic-room">2</span>
+                            <span class="ic-bathtub">2</span>
+                        </div>
+                    </div>
+                    <div class="list-group">
+                        <ul class="img-list">
+                            <li>
+                                <img src="../../resources/images/common/image_3.png" alt="방1">
+                            </li>
+                            <li>
+                                <img src="../../resources/images/common/image_4.png" alt="방2">
+                            </li>
+                        </ul>
+                        <p class="list-tit">₱7,000,000</p>
+                        <a href="#none" class="btn-set like on">찜</a>
+                        <div class="list-txt">
+                            <div class="list-sub-tit tooltip-wrap">₱140,000 PSM
+                                <div class="info-tooltip">정보</div>
+                                <div class="tooltip-txt">
+                                    <p>PSM</p>
+                                    <p>means ‘per square meter’</p>
+                                    <button type="button" class="tooltip-close">닫기</button>
+                                </div>
+                            </div>
+                            <span class="ic-room">2</span>
+                            <span class="ic-bathtub">2</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

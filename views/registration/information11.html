@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../../resources/css/lib/default.css">
+    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+
+    <script type="text/javascript" src="../../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- //header -->
+        <header id="lnb">
+            <script>
+                $(document).ready(function(){
+                    document.charset="euc-kr";
+                    $("#lnb").load("../include/inc_header.html");
+                });
+            </script>
+        </header>
+        <!-- header// -->
+        <form>
+            <div class="contents-wrap">
+                <!-- <section>
+                    <div class="info-img-group">
+                        <div class="info-img info6"></div>
+                        <p>Check information before registering</p>
+                    </div>
+                </section> -->
+                <section class="check-information">
+                    <div class="text-group">
+                        <p class="tit">Edit post</p>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="information6.html">
+                                    <img src="../../resources/images/common/image_1.png" alt="방1">
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="information6.html">
+                                    <img src="../../resources/images/common/image_2.png" alt="방2">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="form-wrap">
+                        <div class="form-group">
+                            <div class="form-control select between">
+                                <p>Author</P>
+                                <a href="information1.html"><span>Landlord</span></a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control select between">
+                                <p>Author</P>
+                                <a href="information2.html"><span>Apartment</span></a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="user_address">ZIP code / address</label>
+                            <input id="user_address" type="text" address="user-address" class="form-control-line address" placeholder="14651" readonly>
+                            <input id="user_address" type="text" address="user-address" class="form-control-line address" placeholder="Philipine #5301, Houston, TX" readonly>
+                            <input id="user_address" type="text" address="user-address" class="form-control-line address" placeholder="Philipine #5301, Houston, TX" readonly>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control select between">
+                                <p>Transation method</p>
+                                <a href="information4.html"><span>Sale</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="fixed-btn-wrap">
+                    <div class="fixed-btn-wrap relative">
+                        <div class="btn-cont-wrap">
+                            <a href="information10.html" class="btn btn-txt">Prev</a>
+                            <a href="../list/list2.html" class="btn btn-primary">Next</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        }
+    });
+</script>
+
+</html>
