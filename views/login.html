@@ -5,68 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../resources/css/lib/renewal.css">
-    <link rel="stylesheet" href="../../resources/css/lib/default.css">
-    <link rel="stylesheet" href="../../resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/css/lib/renewal.css">
+    <link rel="stylesheet" href="../resources/css/lib/default.css">
 
-    <script type="text/javascript" src="../../resources/js/lib/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="../../resources/js/lib/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="../../resources/js/lib/default.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/lib/default.js"></script>
 </head>
 
 <body>
     <div class="wrap">
         <!-- //header -->
         <header id="lnb">
-            <script>
-                $(document).ready(function(){
-                    document.charset="euc-kr";
-                    $("#lnb").load("./include/inc_header.html");
-                });
-            </script>
+            <h1>
+                <img src="../resources/images/common/logo_white.png" alt="로고">
+            </h1>
         </header>
         <!-- header// -->
-        <!-- s:menuWrap -->
-        <div id="menuWrap">
-            <script>
-            $(document).ready(function(){
-                document.charset="euc-kr";
-                $("#menuWrap").load("./include/inc_menu.html");
-            });
-            </script>
-        </div>
-        <!-- e:menuWrap -->
         <form>
-            <div class="contents-wrap">
-                <section class="info-img-wrap">
-                    <div class="text-group">
-                        <p class="tit">My post</p>
-                    </div>
-                    <div class="info-img-group">
-                        <div class="info-img post1"></div>
-                        <p>No post</p>
+            <div class="contents-wrap login">
+                <section class="type-spread">
+                    <div class="login-bg">
+                        <img src="../resources/images/common/login_bg.png" alt="">
                     </div>
                 </section>
-                <section class="fixed-btn-wrap">
-                    <div class="fixed-btn-wrap relative">
-                        <div class="btn-cont-wrap">
-                            <a href="../registration/information1.html" class="btn btn-primary">Write a post</a>
+                <section class="login-form">
+                    <div class="form-wrap">
+                        <div class="form-group">
+                            <input id="user_id" type="text" name="user-id" class="form-control-line" placeholder="ID">
+                        </div>
+                    </div>
+                    <div class="form-wrap">
+                        <div class="form-group">
+                            <input id="user_password" type="text" name="user-password" class="form-control-line" placeholder="password">
                         </div>
                     </div>
                 </section>
+                <section class="btn-wrap">
+                    <a href="none" class="btn btn-primary">Sign in
+                </a></section>
             </div>
         </form>
     </div>
 </body>
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        }
-    });
-</script>
+
+
+
+
 
 </html>

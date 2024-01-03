@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+  // 체크박스 클릭 시 text 변경
+  $(".trans-check").click(function(){
+    if($(".trans-check input").prop("checked")){
+      $("#change1").html("sqft");
+      $("#change2").html("Switch ‘㎡’");
+    }else{
+      $("#change1").html("㎡");
+      $("#change2").html("Switch ‘sqft’");
+    }
+  });
+
   /**  3자리 수마다 콤마 적용 **/
   $(document).on('keyup', 'input[inputmode=numeric]', function (event) {
     this.value = this.value.replace(/[^0-9]/g, ''); // 입력값이 숫자가 아니면 공백
